@@ -145,7 +145,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="width" value="1120" />
     <option name="height" value="795" />
@@ -211,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TopKFrequentElements">
+  <component name="RunManager" selected="Application.SlidingWindow">
     <configuration name="FillGaps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cml.FillGaps" />
       <module name="IntS" />
@@ -282,9 +282,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SlidingWindow" />
         <item itemvalue="Application.TopKFrequentElements" />
         <item itemvalue="Application.QueueReconstructionByHeight" />
-        <item itemvalue="Application.SlidingWindow" />
         <item itemvalue="Application.FillGaps" />
       </list>
     </recent_temporary>

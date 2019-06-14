@@ -23,7 +23,6 @@ public class SlidingWindow {
         for (int i = 0; i < a.length; i++) {
             int startRange=(int)a[i]-v;
             int endRange=(int)a[i]+v;
-            System.out.println(startRange+"*"+endRange);
             int start=0;
             int end=0;
             if(startRange<0){
