@@ -9,8 +9,6 @@ public class MaxPointsOnALine {
     static class Point {
         private double x;
         private double y;
-
-
         public Point(double x, double y) {
             this.x = x;
             this.y = y;
@@ -40,11 +38,11 @@ public class MaxPointsOnALine {
         for (int i = 0; i < points.length; i++) {
             HashMap<Double, Integer> hm = new HashMap<>();
             int samex = 1;
-            int samep = 0;
+            int samepoint = 0;
             for (int j = 0; j < points.length; j++) {
                 if (j != i) {
                     if ((points[j].x == points[i].x) && (points[j].y == points[i].y)) {
-                        samep++;
+                        samepoint++;
                     }
                     if (points[j].x == points[i].x) {
                         samex++;
@@ -56,7 +54,7 @@ public class MaxPointsOnALine {
                     } else {
                         hm.put(slope, 2);
                     }
-                    result = Math.max(result, hm.get(slope) + samep);
+                    result = Math.max(result, hm.get(slope) + samepoint);
                 }
             }
             result = Math.max(result, samex);

@@ -13,10 +13,11 @@ public class TopKFrequentElements {
         for (int i = 0; i < input.length; i++) {
             arr[i] = Integer.parseInt(input[i]);
         }
-        int k=Integer.parseInt(rd.readLine());
-        TopKFrequentElements tp=new TopKFrequentElements();
-        System.out.println(tp.topKFrequent(arr,k));
-}
+        int k = Integer.parseInt(rd.readLine());
+        TopKFrequentElements tp = new TopKFrequentElements();
+        System.out.println(tp.topKFrequent(arr, k));
+    }
+
     public Set<Integer> topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap();
         for (int i : nums)
@@ -25,15 +26,11 @@ public class TopKFrequentElements {
             } else {
                 map.put(i, 1);
             }
+        //We put elements in LinkedHashMap ordered in descending order
         LinkedHashMap<Integer, Integer> reverseSortedMap = new LinkedHashMap<>();
-        map.entrySet()
-                .stream()
-                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+        map.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
 
-        TreeMap<Integer, Integer> finalMap = reverseSortedMap.entrySet().stream()
-                .limit(k)
-                .collect(TreeMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll);
+        TreeMap<Integer, Integer> finalMap = reverseSortedMap.entrySet().stream().limit(k).collect(TreeMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll);
         return finalMap.keySet();
     }
 }

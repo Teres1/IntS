@@ -10,19 +10,20 @@ public class FillGaps {
     public static void main(String[] args) throws IOException {
         BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
         String[] input = rd.readLine().split(" ");
-        List<String>a=new ArrayList<>();
+        List<String> a = new ArrayList<>();
         for (int i = 0; i < input.length; i++) {
             a.add(input[i]);
         }
         FillGaps fg = new FillGaps();
         System.out.println(fg.fillGaps(a));
         System.out.println(fg.fillGaps2(a));
+        System.out.println(fg.fillGaps3(a));
     }
 
     private double returnStandardDeviation(List<String> a) {
-        List<Double>arr=new ArrayList<>();
+        List<Double> arr = new ArrayList<>();
         for (int i = 0; i < a.size(); i++) {
-            if(!a.get(i).equals("NaN")){
+            if (!a.get(i).equals("NaN")) {
                 arr.add(Double.parseDouble(a.get(i)));
             }
         }
@@ -38,22 +39,23 @@ public class FillGaps {
         standardDeviation = Math.sqrt(secondSum / (a.size() - 1));
         return standardDeviation;
     }
-    private List<String> fillGaps(List<String>a){
-        List<String> filledArray=new ArrayList<>();
+
+    private List<String> fillGaps(List<String> a) {
+        List<String> filledArray = new ArrayList<>();
         for (int i = 0; i < a.size(); i++) {
-            if(a.get(i).equals("NaN")){
-                filledArray.add(String.format("%.2f",
-                        returnStandardDeviation(a)*(i-1)+Double.parseDouble(a.get(0))));
-            }else{
+            if (a.get(i).equals("NaN")) {
+                filledArray.add(String.format("%.2f", returnStandardDeviation(a) * (i - 1) + Double.parseDouble(a.get(0))));
+            } else {
                 filledArray.add(a.get(i));
             }
         }
         return filledArray;
     }
-    private List<String> fillGaps2(List<String>a){
-        List<String> filledArray=new ArrayList<>();
-        double max=-Double.MAX_VALUE;
-        double min=Double.MAX_VALUE;
+
+    private List<String> fillGaps2(List<String> a) {
+        List<String> filledArray = new ArrayList<>();
+        double max = -Double.MAX_VALUE;
+        double min = Double.MAX_VALUE;
         for (int i = 0; i < a.size(); i++) {
             if (!a.get(i).equals("NaN")) {
                 if (min > Double.parseDouble(a.get(i))) {
@@ -64,13 +66,35 @@ public class FillGaps {
                 }
             }
         }
-        double actualizer=min+(max-min)/a.size();
+        double actualizer = min + (max - min) / a.size();
 
         for (int i = 0; i < a.size(); i++) {
-            if(a.get(i).equals("NaN")){
-                filledArray.add(String.format("%.2f",
-                        actualizer*(i+1)/a.size()+(max-min)/a.size()));
-            }else{
+            if (a.get(i).equals("NaN")) {
+                filledArray.add(String.format("%.2f", actualizer * (i + 1) / a.size() + (max - min) / a.size()));
+            } else {
+                filledArray.add(a.get(i));
+            }
+        }
+        return filledArray;
+    }
+
+    private List<String> fillGaps3(List<String> a) {
+        List<String> filledArray = new ArrayList<>();
+        filledArray.add(a.get(0));
+        double sum = 0;
+        for (int i = 0; i < a.size(); i++) {
+            if (!a.get(i).equals("NaN")) {
+                sum+=Double.parseDouble(a.get(i));
+            }
+        }
+        for (int i = 1; i < a.size(); i++) {
+            if (a.get(i).equals("NaN")) {
+                if (Math.abs(Double.parseDouble(filledArray.get(i - 1)) - 2 * sum / a.size()) < Math.abs(Double.parseDouble(a.get(i - 1)))) {
+                    filledArray.add((Double.parseDouble(a.get(i - 1)) - sum / a.size()) + "");
+                } else {
+                    filledArray.add((Double.parseDouble(filledArray.get(i - 1)) + sum / a.size()) + "");
+                }
+            } else {
                 filledArray.add(a.get(i));
             }
         }

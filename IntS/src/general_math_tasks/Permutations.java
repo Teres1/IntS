@@ -12,10 +12,11 @@ public class Permutations {
         for (int i = 0; i < input.length; i++) {
             arr[i] = Integer.parseInt(input[i]);
         }
-        Permutations pm=new Permutations();
-        pm.generatePermutations(arr,input.length ,input.length);
+        Permutations pm = new Permutations();
+        pm.generatePermutations(arr, input.length, input.length);
     }
 
+    //We use Heap's algorithm
     private void generatePermutations(int arr[], int size, int n) {
         if (size == 1) {
             for (int i = 0; i < n; i++)
@@ -28,9 +29,7 @@ public class Permutations {
                 int temp = arr[0];
                 arr[0] = arr[size - 1];
                 arr[size - 1] = temp;
-            }
-
-            else {
+            } else {
                 int temp = arr[i];
                 arr[i] = arr[size - 1];
                 arr[size - 1] = temp;

@@ -12,6 +12,7 @@ public class Dispersion {
         for (int i = 0; i < input.length; i++) {
             arr[i] = Double.parseDouble(input[i]);
         }
+        //We expect that the input is valid
         if(input.length==1){
             System.out.println("Please enter at least two values");
         }
