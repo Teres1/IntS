@@ -24,8 +24,8 @@
       <file leaf-file-name="SlidingWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cml/SlidingWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="102">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindTrend.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FindTrend.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cml/FindTrend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+            <state relative-caret-position="138">
+              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -72,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopKFrequentElements.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TopKFrequentElements.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/general_math_tasks/TopKFrequentElements.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
@@ -129,12 +129,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/general_math_tasks/MaxPointsOnALine.java" />
         <option value="$PROJECT_DIR$/src/cml/FillGaps.java" />
-        <option value="$PROJECT_DIR$/src/cml/SlidingWindow.java" />
         <option value="$PROJECT_DIR$/src/general_math_tasks/QueueReconstructionByHeight.java" />
         <option value="$PROJECT_DIR$/src/cml/Dispersion.java" />
         <option value="$PROJECT_DIR$/src/general_math_tasks/Permutations.java" />
-        <option value="$PROJECT_DIR$/src/cml/FindTrend.java" />
         <option value="$PROJECT_DIR$/src/general_math_tasks/TopKFrequentElements.java" />
+        <option value="$PROJECT_DIR$/src/cml/SlidingWindow.java" />
+        <option value="$PROJECT_DIR$/src/cml/FindTrend.java" />
       </list>
     </option>
   </component>
@@ -298,11 +298,12 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32968536" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32968536" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32968536" />
       <window_info anchor="bottom" id="Sequence" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
@@ -318,7 +319,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32968536" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -459,16 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cml/SlidingWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/general_math_tasks/LongestConsecutiveSubsequence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -497,13 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cml/FindTrend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/general_math_tasks/Permutations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -515,6 +498,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cml/SlidingWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cml/FindTrend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
         </state>
       </provider>
     </entry>

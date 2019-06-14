@@ -52,7 +52,7 @@ public class FindTrend {
         return result;
     }
 
-    //Second way->Linear trend equation
+    //Second way->Linear equation
     private List<Double> findTrendFirstWay(double[] arr) {
         List<Double> result = new ArrayList<>();
         if (arr.length >= 3) {
