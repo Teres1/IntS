@@ -3,6 +3,7 @@ package cml;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Dispersion {
     public static void main(String[] args) throws IOException {
@@ -26,6 +27,7 @@ public class Dispersion {
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
+        System.out.println(sum/arr.length);
         double secondSum = 0;
         for (int i = 0; i < arr.length; i++) {
             secondSum += Math.pow(arr[i] - sum / arr.length, 2);

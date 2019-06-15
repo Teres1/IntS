@@ -14,35 +14,40 @@ public class SlidingWindow {
         for (int i = 0; i < input.length; i++) {
             arr[i] = Double.parseDouble(input[i]);
         }
-        int v=Integer.parseInt(rd.readLine());
-        SlidingWindow sw=new SlidingWindow();
-        System.out.println(sw.findSlidingWindow(arr,v));
+        int v = Integer.parseInt(rd.readLine());
+        SlidingWindow sw = new SlidingWindow();
+        System.out.println(sw.findSlidingWindow(arr, v));
     }
-    private List<Double> findSlidingWindow(double[]a, int v){
-        List<Double>list=new ArrayList<>();
+
+    private List<Double> findSlidingWindow(double[] a, int v) {
+        List<Double> list = new ArrayList<>();
         for (int i = 0; i < a.length; i++) {
-            int startRange=(int)a[i]-v;
-            int endRange=(int)a[i]+v;
-            int start=0;
-            int end=0;
-            if(startRange<0){
-                start=0;
-            }else {
-                start=startRange;
+            int startRange = (int) a[i] - v;
+            int endRange = (int) a[i] + v;
+
+            int start = 0;
+            for (int k = 0; k < a.length; k++) {
+                if (a[k] <= endRange && a[k] >= startRange) {
+                    start = k;
+                    break;
+                }
             }
-            if(endRange>a.length-1){
-                end=a.length-1;
-            }else{
-                end=endRange;
-            }
-            double sum=0;
-            for (int j = start; j <= end; j++) {
-                if(a[j]>=startRange&&a[j]<=endRange){
-                    sum+=a[j];
+            double sum = 0;
+            int j = start;
+            while (a[j] <= endRange) {
+                sum += a[j];
+                j++;
+                if (j == i + endRange + 1 || j == a.length) {
+                    break;
+                }
+                if (a[j] == endRange) {
+                    sum += endRange;
+                    break;
                 }
             }
             list.add(sum);
         }
         return list;
+
     }
 }
