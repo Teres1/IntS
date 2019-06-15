@@ -15,8 +15,7 @@ public class MaxPointsOnALine {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args){
 
         MaxPointsOnALine maxPointsOnALine = new MaxPointsOnALine();
         Point[] points = new Point[3];

@@ -16,10 +16,10 @@ public class SlidingWindow {
         }
         int v = Integer.parseInt(rd.readLine());
         SlidingWindow sw = new SlidingWindow();
-        System.out.println(sw.findSlidingWindow(arr, v));
+        System.out.println(sw.calculateSlidingWindowValue(arr, v));
     }
 
-    private List<Double> findSlidingWindow(double[] a, int v) {
+    private List<Double> calculateSlidingWindowValue(double[] a, int v) {
         List<Double> list = new ArrayList<>();
         for (int i = 0; i < a.length; i++) {
             int startRange = (int) a[i] - v;

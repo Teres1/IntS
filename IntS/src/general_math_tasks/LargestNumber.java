@@ -14,10 +14,10 @@ public class LargestNumber {
             arr[i] = Integer.parseInt(input[i]);
         }
         LargestNumber ln = new LargestNumber();
-        System.out.println(ln.largestNumber(arr));
+        System.out.println(ln.findLargestNumber(arr));
     }
 
-    private String largestNumber(int[] arr) {
+    private String findLargestNumber(int[] arr) {
         if (arr == null || arr.length == 0) {
             return "";
         }

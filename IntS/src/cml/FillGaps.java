@@ -15,12 +15,12 @@ public class FillGaps {
             a.add(input[i]);
         }
         FillGaps fg = new FillGaps();
-        System.out.println(fg.fillGaps(a));
-        System.out.println(fg.fillGaps2(a));
-        System.out.println(fg.fillGaps3(a));
+        System.out.println(fg.fillGapsFirstWay(a));
+        System.out.println(fg.fillGapsSecondWay(a));
+        System.out.println(fg.fillGapsThirdWay(a));
     }
 
-    private double returnStandardDeviation(List<String> a) {
+    private double calculateStandardDeviation(List<String> a) {
         List<Double> arr = new ArrayList<>();
         for (int i = 0; i < a.size(); i++) {
             if (!a.get(i).equals("NaN")) {
@@ -40,11 +40,11 @@ public class FillGaps {
         return standardDeviation;
     }
 
-    private List<String> fillGaps(List<String> a) {
+    private List<String> fillGapsFirstWay(List<String> a) {
         List<String> filledArray = new ArrayList<>();
         for (int i = 0; i < a.size(); i++) {
             if (a.get(i).equals("NaN")) {
-                filledArray.add(String.format("%.2f", returnStandardDeviation(a) * (i - 1) + Double.parseDouble(a.get(0))));
+                filledArray.add(String.format("%.2f", calculateStandardDeviation(a) * (i - 1) + Double.parseDouble(a.get(0))));
             } else {
                 filledArray.add(a.get(i));
             }
@@ -52,7 +52,7 @@ public class FillGaps {
         return filledArray;
     }
 
-    private List<String> fillGaps2(List<String> a) {
+    private List<String> fillGapsSecondWay(List<String> a) {
         List<String> filledArray = new ArrayList<>();
         double max = -Double.MAX_VALUE;
         double min = Double.MAX_VALUE;
@@ -78,7 +78,7 @@ public class FillGaps {
         return filledArray;
     }
 
-    private List<String> fillGaps3(List<String> a) {
+    private List<String> fillGapsThirdWay(List<String> a) {
         List<String> filledArray = new ArrayList<>();
         filledArray.add(a.get(0));
         double sum = 0;

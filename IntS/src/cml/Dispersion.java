@@ -18,10 +18,10 @@ public class Dispersion {
             System.out.println("Please enter at least two values");
         }
         Dispersion ds = new Dispersion();
-        System.out.println(ds.returnStandardDeviation(arr));
+        System.out.println(ds.calculateStandardDeviation(arr));
     }
 
-    private double returnStandardDeviation(double[] arr) {
+    private double calculateStandardDeviation(double[] arr) {
         double standardDeviation = 0;
         double sum = 0;
         for (int i = 0; i < arr.length; i++) {

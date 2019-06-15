@@ -15,10 +15,10 @@ public class TopKFrequentElements {
         }
         int k = Integer.parseInt(rd.readLine());
         TopKFrequentElements tp = new TopKFrequentElements();
-        System.out.println(tp.topKFrequent(arr, k));
+        System.out.println(tp.findTopKFrequentElementsInArray(arr, k));
     }
 
-    public Set<Integer> topKFrequent(int[] nums, int k) {
+    private Set<Integer> findTopKFrequentElementsInArray(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap();
         for (int i : nums)
             if (map.containsKey(i)) {
