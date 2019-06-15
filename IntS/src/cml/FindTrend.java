@@ -29,8 +29,8 @@ public class FindTrend {
         double firstIndexOfLinearRegresion = 0;
         double secondIndexOfLinearRegresion = 0;
         List<Double> result = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            arrSum += arr[i];
+        for (double i :arr) {
+            arrSum += i;
         }
         for (int i = 0; i < arr.length; i++) {
             indexSum += i + 1;

@@ -9,7 +9,7 @@ public class MaxPointsOnALine {
     static class Point {
         private double x;
         private double y;
-        public Point(double x, double y) {
+        Point(double x, double y) {
             this.x = x;
             this.y = y;
         }
@@ -27,7 +27,7 @@ public class MaxPointsOnALine {
 
     }
 
-    public int maxPoints(Point[] points) {
+    private int maxPoints(Point[] points) {
         if (points.length <= 0) {
             return 0;
         }
